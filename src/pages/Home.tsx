@@ -1,3 +1,4 @@
+/* Login Form */
 import React from 'react';
 import { TrendingUp, TrendingDown, DollarSign, Package } from 'lucide-react';
 import { useGlobalContext } from '../context/GlobalContext';
@@ -91,7 +92,7 @@ const Home: React.FC = () => {
                 <div>
                   <p className="text-sm text-gray-400">{expense.date}</p>
                   <p className="font-semibold">
-                    {state.language === 'en' ? 'Chicken' : 'கோழி'}: {expense.chicken.weight}g
+                    {state.language === 'en' ? 'Chicken' : 'கோழி'}: {expense.chicken_weight}g
                   </p>
                 </div>
                 <p className="text-red-400 font-bold">₹{expense.total}</p>
@@ -108,7 +109,7 @@ const Home: React.FC = () => {
               {state.language === 'en' ? 'Profit per gram' : 'கிராமுக்கு லாபம்'}
             </p>
             <p className="text-xl font-bold text-orange-400">
-              ₹{totalRevenue > 0 ? (totalProfit / (state.expenses.reduce((total, exp) => total + exp.chicken.weight, 0) || 1)).toFixed(2) : '0.00'}
+              ₹{totalRevenue > 0 ? (totalProfit / (state.expenses.reduce((total, exp) => total + exp.chicken_weight, 0) || 1)).toFixed(2) : '0.00'}
             </p>
           </div>
           <div className="text-center">
