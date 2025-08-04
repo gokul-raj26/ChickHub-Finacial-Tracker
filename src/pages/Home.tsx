@@ -108,7 +108,7 @@ const Home: React.FC = () => {
               {state.language === 'en' ? 'Profit per gram' : 'கிராமுக்கு லாபம்'}
             </p>
             <p className="text-xl font-bold text-orange-400">
-              ₹{totalRevenue > 0 ? (totalProfit / (state.expenses.reduce((total, exp) => total + exp.chicken.weight, 0) || 1)).toFixed(2) : '0.00'}
+              ₹{totalRevenue > 0 ? (totalProfit / (state.expenses.reduce((total, exp) => total + exp.chicken_weight, 0) || 1)).toFixed(2) : '0.00'}
             </p>
           </div>
           <div className="text-center">

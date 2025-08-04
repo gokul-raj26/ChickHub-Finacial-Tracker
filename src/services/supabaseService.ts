@@ -128,7 +128,7 @@ class SupabaseService {
     const { data, error } = await supabase
       .from('inventory')
       .select('*')
-      .single();
+      .maybeSingle();
     
     if (error) {
       console.error('Error fetching inventory:', error);

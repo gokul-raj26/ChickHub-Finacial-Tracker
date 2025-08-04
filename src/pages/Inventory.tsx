@@ -18,7 +18,7 @@ const Inventory: React.FC = () => {
   });
 
   const handleInputChange = (field: string, value: number) => {
-    setExpenseForm(prev => ({ ...prev, [field]: field === 'chickenWeight' || field === 'chickenCost' || field === 'teaCups' ? value : value }));
+    setExpenseForm(prev => ({ ...prev, [field]: value.toString() }));
   };
 
   const calculateTotal = () => {
@@ -44,12 +44,13 @@ const Inventory: React.FC = () => {
     
     addExpense({
       date: new Date().toISOString().split('T')[0],
-      chicken: { weight: Number(expenseForm.chickenWeight), cost: Number(expenseForm.chickenCost) },
-      masala: expenseForm.masala,
-      oil: expenseForm.oil,
-      gas: expenseForm.gas,
-      teaCups: Number(expenseForm.teaCups) * 1.5,
-      breading: expenseForm.breading,
+      chicken_weight: Number(expenseForm.chickenWeight),
+      chicken_cost: Number(expenseForm.chickenCost),
+      masala: Number(expenseForm.masala) || 0,
+      oil: Number(expenseForm.oil) || 0,
+      gas: Number(expenseForm.gas) || 0,
+      tea_cups: Number(expenseForm.teaCups) * 1.5 || 0,
+      breading: Number(expenseForm.breading) || 0,
       total
     });
 
