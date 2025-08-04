@@ -1,4 +1,4 @@
-/* Login Form */
+// Home.tsx
 import React from 'react';
 import { TrendingUp, TrendingDown, DollarSign, Package } from 'lucide-react';
 import { useGlobalContext } from '../context/GlobalContext';

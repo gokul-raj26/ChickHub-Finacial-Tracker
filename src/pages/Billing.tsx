@@ -1,3 +1,6 @@
+// billing.tsx
+// This file is part of the Billing page in a React application.
+// It handles the billing process, including adding items, managing customer details, and generating bills.
 import React, { useState } from 'react';
 import { ShoppingCart, User, Phone, CreditCard, Banknote, Plus } from 'lucide-react';
 import { useGlobalContext } from '../context/GlobalContext';
