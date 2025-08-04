@@ -259,13 +259,13 @@ const Inventory: React.FC = () => {
                   <td className="p-3">{expense.date}</td>
                   <td className="p-3">
                     <div className="text-xs">
-                      <div>{expense.chicken.weight}g</div>
-                      <div className="text-gray-400">₹{expense.chicken.cost}</div>
+                      <div>{expense.chicken_weight}g</div>
+                      <div className="text-gray-400">₹{expense.chicken_cost}</div>
                     </div>
                   </td>
                   <td className="p-3">₹{expense.masala}</td>
                   <td className="p-3">₹{expense.oil}</td>
-                  <td className="p-3">₹{expense.gas + expense.teaCups + expense.breading}</td>
+                  <td className="p-3">₹{expense.gas + expense.tea_cups + expense.breading}</td>
                   <td className="p-3 font-semibold text-red-400">₹{expense.total}</td>
                 </tr>
               ))}
